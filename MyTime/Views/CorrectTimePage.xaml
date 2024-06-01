@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MyTime.Views"
+             x:Class="MyTime.Views.CorrectTimePage"
+             Title="Zeitkorrektur">
+
+    <StackLayout Padding="30" Spacing="20">
+        <Label Text="Datum" FontSize="Medium"/>
+        <DatePicker Date="{Binding CurrentDate}" Format="dd.MM.yyyy" />
+
+        <Label Text="Uhrzeit" FontSize="Medium"/>
+        <TimePicker Time="{Binding CorrectedTime}" Format="HH:mm" />
+
+        <StackLayout Orientation="Horizontal" Spacing="20">
+            <Button Text="Arbeitsstart bestätigen" Command="{Binding ConfirmStartCorrectionCommand}"/>
+            <Button Text="Arbeitsende bestätigen" Command="{Binding ConfirmEndCorrectionCommand}"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

@@ -6,10 +6,10 @@
              Title="Overview">
 
     <StackLayout Padding="30" Spacing="20">
-        <Button Text="Arbeitsstart" Command="{Binding StartWorkCommand}"/>
-        <Button Text="Arbeitsende" Command="{Binding EndWorkCommand}"/>
-        <Button Text="Zeitkorrektur" Command="{Binding CorrectTimeCommand}"/>
-        <Button Text="Zeitnachtrag" Command="{Binding AddTimeCommand}"/>
+        <Button Text="Arbeitsstart" Command="{Binding NavigateToStartWorkPageCommand}"/>
+        <Button Text="Arbeitsende" Command="{Binding NavigateToEndWorkPageCommand}"/>
+        <Button Text="Zeitkorrektur" Command="{Binding NavigateToCorrectTimePageCommand}"/>
+        <Button Text="Zeitnachtrag" Command="{Binding NavigateToAddTimePageCommand}"/>
         <Button Text="Übersicht" Command="{Binding OverviewCommand}"/>
         <Button Text="Logout" Command="{Binding LogoutCommand}"/>
     </StackLayout>
