@@ -10,7 +10,7 @@
         <Button Text="Arbeitsende" Command="{Binding NavigateToEndWorkPageCommand}"/>
         <Button Text="Zeitkorrektur" Command="{Binding NavigateToCorrectTimePageCommand}"/>
         <Button Text="Zeitnachtrag" Command="{Binding NavigateToAddTimePageCommand}"/>
-        <Button Text="Übersicht" Command="{Binding OverviewCommand}"/>
+        <Button Text="Übersicht" Command="{Binding NavigateToOverviewDetailsPageCommand}"/>
         <Button Text="Logout" Command="{Binding LogoutCommand}"/>
     </StackLayout>
 </ContentPage>

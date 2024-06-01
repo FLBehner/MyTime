@@ -15,6 +15,7 @@ namespace MyTime.ViewModels
         public ICommand NavigateToEndWorkPageCommand { get; }
         public ICommand NavigateToCorrectTimePageCommand { get; }
         public ICommand NavigateToAddTimePageCommand { get; }
+        public ICommand NavigateToOverviewDetailsPageCommand { get; }
 
         public OverviewPageViewModel()
         {
@@ -28,6 +29,7 @@ namespace MyTime.ViewModels
             NavigateToEndWorkPageCommand = new Command(OnNavigateToEndWorkPage);
             NavigateToCorrectTimePageCommand = new Command(OnNavigateToCorrectTimePage);
             NavigateToAddTimePageCommand = new Command(OnNavigateToAddTimePage);
+            NavigateToOverviewDetailsPageCommand = new Command(OnNavigateToOverviewDetailsPage);
         }
 
         private async void OnStartWork() { /* Implement logic */ }
@@ -51,6 +53,10 @@ namespace MyTime.ViewModels
         private async void OnNavigateToAddTimePage()
         {
             await Application.Current.MainPage.Navigation.PushAsync(new Views.AddTimePage());
+        }
+        private async void OnNavigateToOverviewDetailsPage()
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new Views.OverviewDetailsPage());
         }
     }
 }

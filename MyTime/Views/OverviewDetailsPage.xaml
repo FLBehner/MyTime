@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MyTime.Views"
+             x:Class="MyTime.Views.OverviewDetailsPage"
+             Title="Übersicht">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="20">
+
+            <Label Text="Deine Übersicht, lieber User:" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center"/>
+
+            <!-- Abschnitt 1: Geleistete Stunden und Zuschüsse -->
+            <Frame BorderColor="Gray" CornerRadius="10" Padding="10">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Geleistete Stunden:" FontSize="Medium"/>
+                    <Label Text="{Binding WorkedHours}" FontSize="Medium"/>
+
+                    <Label Text="Tage mit Spesenzuschuss:" FontSize="Medium"/>
+                    <Label Text="{Binding DaysWithPerDiem}" FontSize="Medium"/>
+
+                    <Label Text="Tage mit Feiertagszuschuss:" FontSize="Medium"/>
+                    <Label Text="{Binding DaysWithHolidayBonus}" FontSize="Medium"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Abschnitt 2: Urlaubstage -->
+            <Frame BorderColor="Gray" CornerRadius="10" Padding="10">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Verbleibende Urlaubstage:" FontSize="Medium"/>
+                    <Label Text="{Binding RemainingVacationDays}" FontSize="Medium"/>
+
+                    <Label Text="Genutzte Urlaubstage:" FontSize="Medium"/>
+                    <Label Text="{Binding UsedVacationDays}" FontSize="Medium"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Abschnitt 3: Krankheitstage -->
+            <Frame BorderColor="Gray" CornerRadius="10" Padding="10">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Krankheitstage:" FontSize="Medium"/>
+                    <Label Text="{Binding SickDays}" FontSize="Medium"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Datum und Uhrzeit -->
+            <VerticalStackLayout Spacing="10">
+                <Label Text="{Binding CurrentDate}" FontSize="Medium" HorizontalOptions="Center"/>
+                <Label Text="{Binding CurrentTime}" FontSize="Medium" HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+
+            <!-- Logout-Button -->
+            <Button Text="Logout" Command="{Binding LogoutCommand}" HorizontalOptions="Center"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
